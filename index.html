@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <title>Mobile Teste - Ideia 2001 - Gabriel Morais Silva</title>
+
+        <link href="https://unpkg.com/ionicons@4.4.8/dist/css/ionicons.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css"/>
+        <script type="text/javascript" src="js/script.js"></script>
+    </head>
+
+    <body>
+
+        <div class="view">
+            <header>
+                <i class="icon ion-md-home model-back btn-header"></i>
+                <span>Bem-vindo!</span>
+            </header>
+            <main class="home">
+                <button type="button" onclick="openProductsModal()" class="btn-outline">Produtos</button>
+            </main>
+        </div>
+
+        <div class="modal" data-modal="products">
+            <header>
+                <i class="icon ion-md-arrow-back model-back btn-header" onclick="modalToggle('products')"></i>
+                <span>Produtos</span>
+                <div class="btns-left btn-header">
+                    <i class="icon ion-md-ribbon" onclick="openResultModal()"></i>
+                </div>
+            </header>
+            <main>
+                <div class="scroll-content">
+                    <div class="spinner" data-spinner="products">
+                        <img src="img/spinner.gif"/>
+                    </div>
+                    <div class="products-list" id="products"></div>
+                </div>
+            </main>
+        </div>
+
+        <div class="modal" data-modal="result">
+            <header>
+                <i class="icon ion-md-arrow-back model-back btn-header" onclick="modalToggle('result')"></i>
+                <span>Resultado</span>
+            </header>
+            <main>
+                <div class="scroll-content">
+                    <div class="result-status">
+                        <span class="result-status-msg">Obrigado pela oportunidade!</span>
+                        <i class="icon ion-md-heart-empty"></i>
+                        <span class="result-status-qt"></span>
+                    </div>
+                    <h3 class="products-list-title">Selecionados</h3>
+                    <div class="products-list" id="products-selected"></div>
+                    <h3 class="products-list-title">Removidos</h3>
+                    <div class="products-list" id="products-removed"></div>
+                </div>
+            </main>
+        </div>
+
+    </body>
+</html>
